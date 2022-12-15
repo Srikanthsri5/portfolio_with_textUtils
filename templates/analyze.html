@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block homeactive %}active{% endblock homeactive%}
+{% block title %}TextUtils{% endblock title %}
+{% block body %}
+
+</nav>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Sucess</strong> You analyzed text will appear here.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="container">
+    <h1>Your Analyzed Text - {{ purpose }}</h1>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                <pre class="text-center my-2 my-sm-0"> {{ analyzed_text }} </pre>
+            </li>
+        </ol>
+    </nav>
+    <img src="../static/img/logo.png" width="300px" height="300px" class="rounded float-right" alt="">
+    {% endblock body %}

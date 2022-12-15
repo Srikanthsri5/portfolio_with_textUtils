@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block homeactive %}active{% endblock homeactive%}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<div class="container-fluid mt-0 px-0 ">
+  <div class="alert alert-success text-center" role="alert">
+    <strong>Welcome to text utils</strong> You can do anything with your text here.
+  </div>
+  <div class="container">
+    <form action='/analyze' method='post'> {% csrf_token %}
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Enter your text here</label>
+        <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
+        <label class="custom-control-label" for="customSwitch1">Remove Puncuations</label>
+      </div>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="uppercase" class="custom-control-input" id="customSwitch3">
+        <label class="custom-control-label" for="customSwitch3"> Uppercase Sentence</label>
+      </div>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="newlineremover" class="custom-control-input" id="customSwitch4">
+        <label class="custom-control-label" for="customSwitch4"> Remove New Line </label>
+      </div>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="extraspaceremover" class="custom-control-input" id="customSwitch5">
+        <label class="custom-control-label" for="customSwitch5"> Remove Space between letters</label>
+      </div>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="charcount" class="custom-control-input" id="customSwitch6">
+        <label class="custom-control-label" for="customSwitch6"> Count Characters</label>
+      </div>
+
+      <div class="custom-control custom-switch">
+        <input type="checkbox" name="extrainbtwnspaceremover" class="custom-control-input" id="customSwitch7">
+        <label class="custom-control-label" for="customSwitch7"> Remove Space between letters</label>
+      </div>
+
+      <button type="submit" class="btn btn-dark mt-2 mb-4">Analyze Text</button>
+    </form>
+  </div>
+</div>
+
+{% endblock body %}

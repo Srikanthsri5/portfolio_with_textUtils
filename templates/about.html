@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block aboutactive %}active{% endblock aboutactive%}
+{% block title %}About{% endblock title %}
+{% block body %}
+{% load static %}
+<div class="container my-3">
+  <h2 class="text-center my-3 py-3">About the Programmer</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/code1.jpg' %}" class="card-img-top"  alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Web Developer</h5>
+          <p class="card-text">Familiar with web development kits like HTML5, CSS3, JavaScript and frameworks like
+            Bootstrap, ReactJS</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/code2.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Software Developer</h5>
+          <p class="card-text">Familiar with programming languages like Python3, C, C++, and also C#.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/code3.jpg' %}" class="card-img-top" height="200px" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Traveller</h5>
+          <p class="card-text">Likes to travel around the world and explore the world with joy.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <h1>Skills</h1>
+      <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;">
+          <ul class="list-group list-group-flush">
+            <li class="btn btn-primary">HTML5, CSS3, JavaScript</li>
+            <li class="btn btn-warning">Python-Django</li>
+            <li class="btn btn-success">ReactJS</li>
+            <li class="btn btn-danger">NodeJS</li>
+            <li class="btn btn-info">ASP.NET</li>
+            <li class="btn btn-dark">MySql</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+      <img src="../static/img/logo.png" class="card-img-top" alt="...">
+
+    </div>
+
+    <div class="col-md-4">
+      <h1>Certifications</h1>
+      <div class="card" style="width: 18rem;">
+        <!-- <img src="https://source.unsplash.com/500x300/?travel,nature" class="card-img-top" alt="..."> -->
+        <div class="card" style="width: 18rem;">
+          <ul class="list-group list-group-flush">
+            <li class="btn btn-primary">DIGITAL 101 By NASSCOM</li>
+            <li class="btn btn-warning">Young Professional By TCS-ION</li>
+            <li class="btn btn-danger">PYTHON COMPLETE COURSE FOR BEGINNERS By Udemy</li>
+            <li class="btn btn-info">GIT Training By SimpliLearn</li>
+            <li class="btn btn-dark">FullStack Web Development by Udemy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+{% endblock body %}
